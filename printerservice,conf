@@ -1,0 +1,15 @@
+#!upstart
+
+# move to /etc/init.d
+# sudo apt-get install upstart
+# sudo start printerservice
+
+description "printerservice"
+start on runlevel [99] 
+  stop on runlevel [06]
+
+#Automatically Respawn: 
+  respawn 
+  respawn limit 99 5
+
+exec /usr/bin/node /opt/qlprinter/index.js >> /var/log/node.log

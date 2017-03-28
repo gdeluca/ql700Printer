@@ -1,0 +1,16 @@
+{
+  "name": "qlprinter",
+  "version": "1.0.0",
+  "description": "printer proxy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gdeluca",
+  "license": "ISC",
+  "dependencies": {
+    "bwip-js": "^1.2.3",
+    "express": "^4.15.2",
+    "gm": "^1.23.0",
+  }
+}
