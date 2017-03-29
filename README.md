@@ -13,7 +13,7 @@ logout and login(should work: exec su -l $USER)
 check printer at: ls -l /dev/usb/lp* 
 
 -create an image with barcode and text description appended
-http://localhost:3000/printimage?barcode=764493827364&text=prueba%20de%20texto%20%20descripcion%20larga%20del%20objeto%20a%20vender%20incluido%20tipo%20y%20descripcion
+http://localhost:1690/printimage?barcode=764493827364&text=prueba%20de%20texto%20%20descripcion%20larga%20del%20objeto%20a%20vender%20incluido%20tpye%20t%C2%A1y%20descripcion%20precio%20%20$500
 
 behind the scenes this will run the command 
 brother_ql_create --model QL-700 --label-size 62 ./test.png > /dev/usb/lp0

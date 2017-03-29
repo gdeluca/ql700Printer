@@ -19,11 +19,11 @@ app.get('/printimage', function(req, res) {
   res.end(' Unknown request format.', 'utf8');
  }
 
-gm(286,108, 'transparent')
+gm(286,50, 'transparent')
 .fill('black')
-.pointSize(20)
-.gravity('left')
-.drawText(15, 30, splitText(text, 30))
+.pointSize(14)
+.gravity('center')
+.drawText(9, 9, splitText(text, 43))
   .write("image.png", function (err) {
     console.log(err);
   });
@@ -32,11 +32,11 @@ gm(286,108, 'transparent')
     bcid:        'ean13',       // Barcode type
     text:         barcode,    // Text to encode
     scale:       3,               // 3x scaling factor
-    height:      10,              // Bar height, in millimeters
+    height:      8,              // Bar height, in millimeters
     includetext: true,            // Show human-readable text
     textxalign:  'center',        // Always good to set this
     textfont:    'Inconsolata',   // Use your custom font
-    textsize:    10              // Font size, in points
+    textsize:    5              // Font size, in points
       }, function (err, png) {
         fs.writeFile("image2.png", png, function(err) {
           gm("image.png")
